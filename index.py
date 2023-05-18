@@ -9,15 +9,14 @@ from langchain.prompts.chat import (AIMessagePromptTemplate,
                                     SystemMessagePromptTemplate)
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
-chat = ChatOpenAI(temperature=0)
-
-
 def approve(type, request):
     #  switch case
     return "Error approving."
 
 
 def run(message, history):
+
+    chat = ChatOpenAI(temperature=0)
 
     messages = [
         SystemMessage(
@@ -38,5 +37,12 @@ def run(message, history):
 
 
 def setup(config):
-    os.environ["OPENAI_API_KEY"] = config["OPENAI_API_KEY"]
-    os.environ["instructions"] = config["instructions"]
+    try:
+        os.environ["OPENAI_API_KEY"] = config["OPENAI_API_KEY"]
+        os.environ["instructions"] = config["instructions"]
+        print("Setup complete.")
+    # print error
+    except KeyError:
+        print("Error setting up.")
+        exit()
+

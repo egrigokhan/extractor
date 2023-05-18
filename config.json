@@ -1,29 +1,17 @@
 {
   "inputs": [
     {
-      "key": "name",
-      "title": "Product Name",
-      "description": "The name of your product",
-      "type": "string"
-    },
-    {
-      "key": "tagline",
-      "title": "Product Tagline",
-      "description": "The tagline of your product",
-      "type": "string"
-    },
-    {
-      "key": "description",
-      "title": "Product Description",
-      "description": "The description of your product",
-      "type": "string"
-    },
-    {
       "key": "OPENAI_API_KEY",
       "title": "OpenAI API Key",
       "description": "Your OpenAI API key",
       "type": "string",
       "secure": true
+    },
+    {
+      "key": "intructions",
+      "title": "Instructions",
+      "description": "The analysis instructions",
+      "type": "string"
     }
   ]
 }

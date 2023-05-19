@@ -25,7 +25,23 @@ def run(message, history):
 
       Instructions: """ + os.environ["instructions"] + """
 
-      Respond only with markdown-formatted text. 
+      Respond only with JSON in the following format:
+
+      {{
+        fields: {{
+            "field_1": "Field 1",
+            "field_2": "Field 2",
+            "field_3": "Field 3",
+            ...
+        }},
+        json: {{
+            "field_1": ...,
+            "field_2": ...,
+            "field_3": ...,
+            ...
+        }},
+        error: "Error message" || null
+      }}
       """)
     ]
 

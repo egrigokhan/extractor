@@ -8,7 +8,7 @@
       "secure": true
     },
     {
-      "key": "intructions",
+      "key": "instructions",
       "title": "Instructions",
       "description": "The analysis instructions",
       "type": "string"

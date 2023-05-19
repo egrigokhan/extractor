@@ -40,7 +40,7 @@ def run(message, history):
             "field_3": ...,
             ...
         }},
-        error: "Error message" || null
+        error: "Error message" || null  # if there is an error, return an error message
       }}
       """)
     ]
